@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": "1234",
-    "database": "chat_application",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "1wldgbthcqck3rrytgjf",
+    "password": "pscale_pw_lRDa1lICR6HRnbMyCPdHKUOt9iMCfaiYcz6fpnHPcNw",
+    "database": "planetdb",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
+    "ssl": true
   },
   "test": {
     "username": "root",

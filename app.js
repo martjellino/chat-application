@@ -1,6 +1,6 @@
 let express = require('express')
 let app = express()
-let port = 3000
+let port = process.env.PORT || 3000
 let models = require('./models/index')
 let appRoute = require('./app/routes/index')
 
