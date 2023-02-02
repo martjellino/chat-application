@@ -15,10 +15,15 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "1wldgbthcqck3rrytgjf",
+    "password": "pscale_pw_lRDa1lICR6HRnbMyCPdHKUOt9iMCfaiYcz6fpnHPcNw",
+    "database": "planetdb",
+    "host": "ap-southeast.connect.psdb.cloud",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "rejectUnauthorized": true
+      }
+    }
   }
 }
