@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Group_Members',
+    tableName: 'group_members'
   });
   return Group_Members;
 };

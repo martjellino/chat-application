@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Personal_Chatroom',
+    tableName: 'personal_chatrooms'
   });
   return Personal_Chatroom;
 };
