@@ -30,19 +30,19 @@ router.post('/personal_message', authMiddleware.isAuthenticate, personalMessageC
 router.get('/personal_message/:personal_chatroom_id/:id', authMiddleware.isAuthenticate, personalMessageController.getPersonalMessageById)
 router.delete('/personal_message/:personal_chatroom_id/:id', authMiddleware.isAuthenticate, personalMessageController.deletePersonalMessage)
 
-// CRUD Group Message
+// CRUD Group Message (Can't update/change message)
 router.post('/group_message', authMiddleware.isAuthenticate, groupMessageController.createGroupMessage)
 router.get('/group_message/:group_chatroom_id/:id', authMiddleware.isAuthenticate, groupMessageController.getGroupMessageById)
 router.delete('/group_message/:group_chatroom_id/:id')
 
-// CRUD Group Chatroom (Can't update/change chatroom)
+// CRUD Group Chatroom
 router.post('/group_chatroom', authMiddleware.isAuthenticate, groupChatroomController.createGroupChatroom)
 router.get('/group_chatroom', authMiddleware.isAuthenticate, groupChatroomController.getGroupChatroom)
 router.get('/group_chatroom/:id', authMiddleware.isAuthenticate, groupChatroomController.getGroupChatroomById)
 router.put('/group_chatroom/:id', authMiddleware.isAuthenticate, groupChatroomController.updateGroupChatroom)
 router.delete('/group_chatroom/:id', authMiddleware.isAuthenticate, groupChatroomController.deleteGroupChatroom)
 
-// CRUD Group Member
+// CRUD Group Member 
 router.post('/member', authMiddleware.isAuthenticate, groupMemberController.createGroupMember)
 router.get('/member', authMiddleware.isAuthenticate, groupMemberController.getGroupMember)
 router.get('/member/:id', authMiddleware.isAuthenticate, groupMemberController.getGroupMemberById)
