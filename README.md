@@ -34,7 +34,66 @@ The chat application is created by:
 - sequelize: ^6.28.0
 - validatorjs: ^3.22.1
 
-## 
+## RESTful API Endpoints
+API Endpoint of Register & Login
+Method | Endpoint | Function |
+--- | --- | --- |
+Post | /auth/register | to register itself/create an account in the chat app |
+Post | /auth/login | to login in the merchant service in chat app |
+
+API Endpoint of users
+Method | Endpoint | Function |
+--- | --- | --- |
+Get | /user/:id | to get or read single list of user in chat app |
+Put | /user/:id | to update a user data in chat app |
+Delete | /user/:id | to delete a user in the chat app |
+
+API Endpoint of personal_chatrooms
+Method | Endpoint | Function |
+--- | --- | --- |
+Post | /personal_chatroom | to create a personal chat room in the chat app |
+Get | /personal_chatroom | to get the all list of personal chat room from the chat app |
+Get | /personal_chatroom/:id | to get the single list of its personal chat room from the chat app |
+Delete | /personal_chatroom/:id | to remove a personal chat room in the chat app |
+
+API Endpoint of personal_messages
+Method | Endpoint | Function |
+--- | --- | --- |
+Post | /personal_chatroom | to create a personal chat room in the chat app |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 This is the simplest possible nodejs api using express that responds to any request with: 
 ```
