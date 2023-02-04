@@ -59,50 +59,45 @@ Delete | /personal_chatroom/:id | to remove a personal chat room in the chat app
 API Endpoint of personal_messages
 Method | Endpoint | Function |
 --- | --- | --- |
-Post | /personal_chatroom | to create a personal chat room in the chat app |
+Post | /personal_message | to create a personal message in the chat app |
+Get | /personal_message/:personal_chatroom_id/:id | to get the specific single list of personal message from the chat app |
+Get | /personal_message/:personal_chatroom_id | to get all list personal message of chat room from the chat app |
+Delete | /personal_message/:personal_chatroom_id/:id | to remove personal message from the chat app |
 
+API Endpoint of group_chatroom
+Method | Endpoint | Function |
+--- | --- | --- |
+Post | /group_chatroom | to create a group chat room in the chat app |
+Get | /group_chatroom | to get the all list of group chat room from the chat app |
+Get | /group_chatroom/:id | to get the single list of its group chat room from the chat app |
+Put | /group_chatroom/:id| to update a group chat room in the chat app |
+Delete | /group_chatroom/:id | to remove a group chat room in the chat app |
 
+API Endpoint of group_messages
+Method | Endpoint | Function |
+--- | --- | --- |
+Post | /group_message | to create a group message in the chat app |
+Get | /group_message/:group_chatroom_id/:id | to get the single list of its group message from the chat app |
+Get | /group_message/:group_chatroom_id | to get all list group message of chat room from the chat app |
+Delete | /group_message/:group_chatroom_id/:id | to remove a group message in the chat app |
 
+API Endpoint of group_member
+Method | Endpoint | Function |
+--- | --- | --- |
+Post | /member | to create a group member in the chat app |
+Get | /member | to get the all list of group member from the chat app |
+Get | /member/:id | to get the single list of its group member from the chat app |
+Delete | /member/:id | to remove a group member in the chat app |
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This is the simplest possible nodejs api using express that responds to any request with: 
-```
-Yo!
-```
+**Validation of Users Entity**
+Field | Format |
+--- | --- |
+fullname | required|min:3|max:50 |
+username | required|min:3|max:30 |
+email | required|email|min:10 |
+password | required|min:6 |
+phone_number | required|numeric
+bio | max:50
 
 ### Deploy it in 7 seconds: 
 It’s already successfully deployed in https://tense-tank-top-hen.cyclic.app/
-![image](https://user-images.githubusercontent.com/119112916/216761486-5e68663f-adba-4d3c-a03f-a355751a3052.png)
-
-[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
-
