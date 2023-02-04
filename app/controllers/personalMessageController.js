@@ -21,6 +21,20 @@ async function getPersonalMessageById (req, res) {
     }
 }
 
+async function getPersonalMessageByChatroomId (req, res) {
+    try {
+        let result = await models.Personal_Messages.findAll({
+            where: {personal_chatroom_id: req.params.personal_chatroom_id}
+        })
+        if (result.length < 1) {
+            return res.json({message: 'The message does not exist'})
+        }
+        res.json(result)
+    } catch (error) {
+        return res.json(error)
+    }
+}
+
 async function deletePersonalMessage (req, res) {
     try {
         let deletePersonalMessage = await models.Personal_Messages.destroy({ where: { id: req.params.id, personal_chatroom_id: req.params.personal_chatroom_id }})
@@ -33,5 +47,6 @@ async function deletePersonalMessage (req, res) {
 module.exports = {
     createPersonalMessage,
     getPersonalMessageById,
+    getPersonalMessageByChatroomId,
     deletePersonalMessage
 }

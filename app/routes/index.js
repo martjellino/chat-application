@@ -28,11 +28,13 @@ router.delete('/personal_chatroom/:id', authMiddleware.isAuthenticate, personalC
 // CRUD Personal Message (Can't update/change message)
 router.post('/personal_message', authMiddleware.isAuthenticate, personalMessageController.createPersonalMessage)
 router.get('/personal_message/:personal_chatroom_id/:id', authMiddleware.isAuthenticate, personalMessageController.getPersonalMessageById)
+router.get('/personal_message/:personal_chatroom_id', authMiddleware.isAuthenticate, personalMessageController.getPersonalMessageByChatroomId)
 router.delete('/personal_message/:personal_chatroom_id/:id', authMiddleware.isAuthenticate, personalMessageController.deletePersonalMessage)
 
 // CRUD Group Message (Can't update/change message)
 router.post('/group_message', authMiddleware.isAuthenticate, groupMessageController.createGroupMessage)
 router.get('/group_message/:group_chatroom_id/:id', authMiddleware.isAuthenticate, groupMessageController.getGroupMessageById)
+router.get('/group_message/:group_chatroom_id', authMiddleware.isAuthenticate, groupMessageController.getGroupMessageByChatroomId)
 router.delete('/group_message/:group_chatroom_id/:id,', authMiddleware.isAuthenticate, groupMemberController.deleteGroupMember)
 
 // CRUD Group Chatroom

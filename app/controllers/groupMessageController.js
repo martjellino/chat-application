@@ -31,6 +31,28 @@ async function getGroupMessageById (req, res) {
     }
 }
 
+async function getGroupMessageByChatroomId (req, res) {
+    try {
+        let result = await models.Group_Messages.findAll({
+            where: {group_chatroom_id: req.params.group_chatroom_id},
+            include: {
+                association: 'group_chatroom',
+                attributes: ['group_name'],
+                include: {
+                    association: 'group_members',
+                    attributes: ['users_id']
+                }
+            }
+        })
+        if (result.length < 1) {
+            return res.json({message: 'The message does not exist'})
+        }
+        res.json(result)
+    } catch (error) {
+        res.json(error)
+    }
+}
+
 async function deleteGroupMessage (req, res) {
     try {
         let deleteGroupMessage = await models.Group_Messages.destroy({ where: {id: req.params.id, group_chatroom_id: req.params.group_chatroom_id} })
@@ -43,5 +65,6 @@ async function deleteGroupMessage (req, res) {
 module.exports = {
     createGroupMessage,
     getGroupMessageById,
+    getGroupMessageByChatroomId,
     deleteGroupMessage
 }
