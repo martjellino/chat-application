@@ -92,12 +92,12 @@ Delete | /member/:id | to remove a group member in the chat app |
 **Validation of Users Entity**
 Field | Format |
 --- | --- |
-fullname | required|min:3|max:50 |
-username | required|min:3|max:30 |
-email | required|email|min:10 |
-password | required|min:6 |
-phone_number | required|numeric
-bio | max:50
+fullname | required, min:3, max:50 |
+username | required, min:3, max:30 |
+email | required, email, min:10 |
+password | required, min:6 |
+phone_number | required, numeric |
+bio | max:50 |
 
 ### Deploy it in 7 seconds: 
 It’s already successfully deployed in https://tense-tank-top-hen.cyclic.app/
