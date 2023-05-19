@@ -55,7 +55,7 @@ async function getGroupMessageByChatroomId (req, res) {
 
 async function deleteGroupMessage (req, res) {
     try {
-        let deleteGroupMessage = await models.Group_Messages.destroy({ where: {id: req.params.id, group_chatroom_id: req.params.group_chatroom_id} })
+        let deleteGroupMessage = await models.Group_Messages.destroy({ where: {group_chatroom_id: req.params.group_chatroom_id, id: req.params.id } })
         res.json({message: 'The message has been deleted!'})
     } catch (error) {
         res.json(error)

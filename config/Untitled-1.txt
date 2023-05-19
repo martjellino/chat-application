@@ -1,0 +1,10 @@
+database: planetdb
+username: 1wldgbthcqck3rrytgjf
+host: ap-southeast.connect.psdb.cloud
+password: pscale_pw_lRDa1lICR6HRnbMyCPdHKUOt9iMCfaiYcz6fpnHPcNw
+
+
+database: planetdb
+username: 1wldgbthcqck3rrytgjf
+host: aws.connect.psdb.cloud
+password: ************
