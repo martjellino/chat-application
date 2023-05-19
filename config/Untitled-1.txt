@@ -8,3 +8,8 @@ database: planetdb
 username: 1wldgbthcqck3rrytgjf
 host: aws.connect.psdb.cloud
 password: ************
+
+database: planetdb
+username: 6wprrsgym3zwxrjmntgd
+host: aws.connect.psdb.cloud
+password: pscale_pw_2ynsVHpzEdNvMSYOnLtXPY8uH4kRJ9FtpYH9gLeiFvQ

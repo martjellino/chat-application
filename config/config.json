@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "1wldgbthcqck3rrytgjf",
-    "password": "pscale_pw_lRDa1lICR6HRnbMyCPdHKUOt9iMCfaiYcz6fpnHPcNw",
+    "username": "6wprrsgym3zwxrjmntgd",
+    "password": "pscale_pw_2ynsVHpzEdNvMSYOnLtXPY8uH4kRJ9FtpYH9gLeiFvQ",
     "database": "planetdb",
-    "host": "ap-southeast.connect.psdb.cloud",
+    "host": "aws.connect.psdb.cloud",
     "dialect": "mysql",
     "ssl": true
   },
@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "1wldgbthcqck3rrytgjf",
-    "password": "pscale_pw_lRDa1lICR6HRnbMyCPdHKUOt9iMCfaiYcz6fpnHPcNw",
+    "username": "6wprrsgym3zwxrjmntgd",
+    "password": "pscale_pw_2ynsVHpzEdNvMSYOnLtXPY8uH4kRJ9FtpYH9gLeiFvQ",
     "database": "planetdb",
-    "host": "ap-southeast.connect.psdb.cloud",
+    "host": "aws.connect.psdb.cloud",
     "dialect": "mysql",
     "dialectOptions": {
       "ssl": {
